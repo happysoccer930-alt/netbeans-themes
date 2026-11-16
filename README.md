@@ -23,15 +23,37 @@ Temas de interfaz (FlatLaf) para **Apache NetBeans 31**, con perfiles de
 
 ## Instalación
 
-```bash
-mvn -B -pl modules/ui-themes,modules/cyberpunk-theme,modules/softdark-theme package
+### Opción recomendada: desde el `.nbm` (funciona en cualquier PC)
+
+1. Compilar:
+   ```bash
+   mvn -B -pl modules/ui-themes,modules/cyberpunk-theme,modules/softdark-theme package
+   ```
+2. Los `.nbm` quedan en `modules/<tema>/target/nbm/`.
+3. NetBeans: **Tools → Plugins → Downloaded → Add Plugins…** → elegir el `.nbm` → **Install** → reiniciar.
+4. **Tools → Aplicar tema DeepSetk Dark / Hacker Green** y aceptar el reinicio.
+
+### Alternativa manual (copia de `.jar`)
+
+Copiar los `.jar` a `%APPDATA%\NetBeans\31\modules\` **no basta**: NetBeans no los
+activa en un perfil nuevo. Hay que declararlos en
+`%APPDATA%\NetBeans\31\config\Modules\<codename>.xml`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//NetBeans//DTD Module Status 1.0//EN"
+    "http://www.netbeans.org/dtds/module-status-1_0.dtd">
+<module name="org.deepsetk.uithemes">
+    <param name="autoload">false</param>
+    <param name="eager">false</param>
+    <param name="enabled">true</param>
+    <param name="jar">modules/org-deepsetk-uithemes.jar</param>
+    <param name="reloadable">false</param>
+</module>
 ```
 
-Copiar los `.jar` resultantes a `%APPDATA%\NetBeans\31\modules\` y reiniciar
-NetBeans. Después: **Herramientas → Aplicar tema DeepSetk Dark / Hacker Green**.
-
-Los `.nbm` generados en `target/nbm/clusters/extra/modules/` también se pueden
-instalar desde **Tools → Plugins → Downloaded**.
+(Probado con un *userdir* vacío: con ese XML el tema arranca aplicado desde el
+primer inicio; sin él, el módulo no se carga.)
 
 ## Estructura
 
