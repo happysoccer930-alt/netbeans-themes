@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "https://netbeans.apache.org/dtds/EditorFontsColors-1_1.dtd">
+<!--
+  Soft Dark - colores especificos de Java.
+  Tipos en arena, metodos en azul acero, campos en lavanda, numeros en ambar
+  y cadenas en verde salvia: todos desaturados.
+-->
+<fontscolors>
+    <fontcolor name="character" default="char"/>
+    <fontcolor name="character-escape" default="character"><font style="bold"/></fontcolor>
+    <fontcolor name="character-escape-invalid" default="character"><font style="italic"/></fontcolor>
+    <fontcolor name="comment" default="comment"/>
+    <fontcolor name="html-tag" default="comment" foreColor="ff39FF14"><font style="italic"/></fontcolor>
+    <fontcolor name="identifier" default="identifier"/>
+    <fontcolor name="javadoc-first-sentence" default="comment"/>
+    <fontcolor name="javadoc-identifier" default="comment" foreColor="ff2E8B3A"/>
+    <fontcolor name="javadoc-tag" default="comment"><font style="bold"/></fontcolor>
+    <fontcolor name="keyword" default="keyword"/>
+    <fontcolor name="keyword-directive" default="keyword"/>
+    <fontcolor name="literal" default="keyword"/>
+    <fontcolor name="mod-abstract"><font style="italic"/></fontcolor>
+    <fontcolor name="mod-annotation-type" default="identifier" foreColor="ff00E676"/>
+    <fontcolor name="mod-annotation-type-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-class" default="identifier" foreColor="ff00E676"/>
+    <fontcolor name="mod-class-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-constructor" default="identifier" foreColor="ff69F0AE"/>
+    <fontcolor name="mod-constructor-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-deprecated" strikeThrough="ff2E8B3A"/>
+    <fontcolor name="mod-enum" default="identifier" foreColor="ff00E676"/>
+    <fontcolor name="mod-enum-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-field" default="field" foreColor="ffB9F6CA"/>
+    <fontcolor name="mod-field-declaration" default="field" foreColor="ffB9F6CA"/>
+    <fontcolor name="mod-interface" default="identifier" foreColor="ff00E676"/>
+    <fontcolor name="mod-interface-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-local-variable" default="identifier"/>
+    <fontcolor name="mod-local-variable-declaration" default="identifier"/>
+    <fontcolor name="mod-method" default="method"/>
+    <fontcolor name="mod-method-declaration" default="method" foreColor="ff69F0AE"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-package-private"/>
+    <fontcolor name="mod-parameter" default="identifier"/>
+    <fontcolor name="mod-parameter-declaration" default="identifier"/>
+    <fontcolor name="mod-private"/>
+    <fontcolor name="mod-protected"/>
+    <fontcolor name="mod-public"/>
+    <fontcolor name="mod-record-declaration" default="identifier" foreColor="ff00E676"><font style="bold"/></fontcolor>
+    <fontcolor name="mod-static"><font style="italic"/></fontcolor>
+    <fontcolor name="mod-unused" foreColor="ff2E8B3A" waveUnderlined="ff2E8B3A"/>
+    <fontcolor name="number" default="number"/>
+    <fontcolor name="operator" default="operator"/>
+    <fontcolor name="separator" default="separator"/>
+    <fontcolor name="string" default="string"/>
+    <fontcolor name="string-escape" default="string" foreColor="ff7CFC00"/>
+    <fontcolor name="string-escape-invalid" default="string" waveUnderlined="ff5252"/>
+    <fontcolor name="whitespace" default="whitespace"/>
+</fontscolors>
+

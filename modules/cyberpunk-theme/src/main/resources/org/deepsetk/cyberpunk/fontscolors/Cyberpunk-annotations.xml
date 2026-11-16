@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor name="Breakpoint" bgColor="ff080d18"/>
+    <fontcolor name="Breakpoint_broken" bgColor="ff070d17"/>
+    <fontcolor name="Breakpoint_stroke" bgColor="ff070d17"/>
+    <fontcolor name="CallSite" bgColor="ff1e467e"/>
+    <fontcolor name="ClassBreakpoint"/>
+    <fontcolor name="ClassBreakpoint_stroke"/>
+    <fontcolor name="CondBreakpoint" bgColor="ff080d18"/>
+    <fontcolor name="CondBreakpoint_broken" bgColor="ff070d17"/>
+    <fontcolor name="CondBreakpoint_stroke" bgColor="ff070d17"/>
+    <fontcolor name="CurrentExpression" bgColor="ff0d213e"/>
+    <fontcolor name="CurrentExpressionLine" bgColor="ff0c1e38"/>
+    <fontcolor name="CurrentExpressionLine_BP" bgColor="ff0c1e38"/>
+    <fontcolor name="CurrentExpressionLine_CBP" bgColor="ff0c1e38"/>
+    <fontcolor name="CurrentExpressionLine_DBP" bgColor="ff0c1e38"/>
+    <fontcolor name="CurrentExpressionLine_DCBP" bgColor="ff0c1e38"/>
+    <fontcolor name="CurrentPC" bgColor="ff070d17"/>
+    <fontcolor name="CurrentPC2" bgColor="ff070d17"/>
+    <fontcolor name="CurrentPC2_BP" bgColor="ff080d18"/>
+    <fontcolor name="CurrentPC2_DBP" bgColor="ff070d17"/>
+    <fontcolor name="CurrentPC2LinePart" bgColor="ff070d17"/>
+    <fontcolor name="CurrentPCLinePart" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt" bgColor="ff070d16"/>
+    <fontcolor name="Dbx_Bpt_broken" bgColor="ff080d18"/>
+    <fontcolor name="Dbx_Bpt_broken_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx" bgColor="ff080d18"/>
+    <fontcolor name="Dbx_Bpt_cmpx_broken" bgColor="ff080d18"/>
+    <fontcolor name="Dbx_Bpt_cmpx_broken_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx_hit" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx_hit_broken" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx_hit_broken_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_cmpx_hit_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_compound" bgColor="ff080d18"/>
+    <fontcolor name="Dbx_Bpt_compound_hit" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_hit" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_hit_broken" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_hit_broken_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_Bpt_hit_dis" bgColor="ff070d17"/>
+    <fontcolor name="Dbx_PC" bgColor="ff070d17"/>
+    <fontcolor name="debugger-mixed_BP" bgColor="ff080d18"/>
+    <fontcolor name="debugger-mixed_BP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-multi_BPCBP" bgColor="ff080d18"/>
+    <fontcolor name="debugger-multi_BPCBP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-multi_DBPCBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_BP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_BP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_BP_stroke" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_CBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_CBP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_CBP_stroke" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_DBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_DBP_stroke" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_DCBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_DCBP_stroke" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_mixedBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_mixedBP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_multi_BPCBP" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_multi_BPCBP_broken" bgColor="ff070d17"/>
+    <fontcolor name="debugger-PC_multi_DBPCBP" bgColor="ff070d17"/>
+    <fontcolor name="DisabledBreakpoint" bgColor="ff070d17"/>
+    <fontcolor name="DisabledBreakpoint_stroke" bgColor="ff070d17"/>
+    <fontcolor name="DisabledClassBreakpoint"/>
+    <fontcolor name="DisabledClassBreakpoint_stroke"/>
+    <fontcolor name="DisabledCondBreakpoint" bgColor="ff070d17"/>
+    <fontcolor name="DisabledCondBreakpoint_stroke" bgColor="ff070d17"/>
+    <fontcolor name="DisabledFieldBreakpoint"/>
+    <fontcolor name="DisabledFieldBreakpoint_stroke"/>
+    <fontcolor name="DisabledMethodBreakpoint"/>
+    <fontcolor name="DisabledMethodBreakpoint_stroke"/>
+    <fontcolor name="editor-bookmark"/>
+    <fontcolor name="FieldBreakpoint"/>
+    <fontcolor name="FieldBreakpoint_stroke"/>
+    <fontcolor name="loadgenProfilingPoint" bgColor="ff1e467e"/>
+    <fontcolor name="loadgenProfilingPointD" bgColor="ff080d18"/>
+    <fontcolor name="MethodBreakpoint"/>
+    <fontcolor name="MethodBreakpoint_stroke"/>
+    <fontcolor name="org-netbeans-modules-cnd-cpp-parser_annotation_err" waveUnderlined="ffe76a74"/>
+    <fontcolor name="org-netbeans-modules-cnd-highligh-semantic-markoccurrences"/>
+    <fontcolor name="org-netbeans-modules-cnd-highlight-security-error"/>
+    <fontcolor name="org-netbeans-modules-cnd-highlight-security-warning"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-extended_is_specialized"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-extended_specializes"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-is_overridden"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-is_overridden_combined"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-is_overridden_combined_pseudo"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-is_overridden_pseudo"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-is_specialized"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-overrides"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-overrides_pseudo"/>
+    <fontcolor name="org-netbeans-modules-cnd-navigation-specializes"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-has_implementations"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-implements"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-implements-has-implementations-combined"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-implements-is-overridden-combined"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-intercepted"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-is_overridden"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-override-is-overridden-combined"/>
+    <fontcolor name="org-netbeans-modules-editor-annotations-overrides"/>
+    <fontcolor name="org-netbeans-modules-git-Annotation"/>
+    <fontcolor name="org-netbeans-modules-git-remote-Annotation"/>
+    <fontcolor name="org-netbeans-modules-mercurial-Annotation"/>
+    <fontcolor name="org-netbeans-modules-mercurial-remote-Annotation"/>
+    <fontcolor name="org-netbeans-modules-subversion-Annotation"/>
+    <fontcolor name="org-netbeans-modules-subversion-remote-Annotation"/>
+    <fontcolor name="org-netbeans-modules-tomcat5-error" bgColor="ff1e467e"/>
+    <fontcolor name="org-netbeans-modules-versioning-annotate-Annotation"/>
+    <fontcolor name="org-netbeans-modules-web-beans-annotations-decorated-bean"/>
+    <fontcolor name="org-netbeans-modules-web-beans-annotations-delegate-point"/>
+    <fontcolor name="org-netbeans-modules-web-beans-annotations-event"/>
+    <fontcolor name="org-netbeans-modules-web-beans-annotations-injection-point"/>
+    <fontcolor name="org-netbeans-modules-web-beans-annotations-observer"/>
+    <fontcolor name="org-netbeans-modules-web-core-syntax-JspParserErrorAnnotation" waveUnderlined="ffe76a74"/>
+    <fontcolor name="org-netbeans-modules-xml-error" bgColor="ff1e467e"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_err"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_err_fixable"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_hint"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_hint_fixable"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_todo" foreColor="ff5f8ad3"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_todo_fixable" foreColor="ff5f8ad3"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_verifier"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_verifier_fixable"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_warn"/>
+    <fontcolor name="org-netbeans-spi-editor-hints-parser_annotation_warn_fixable"/>
+    <fontcolor name="OtherThread"/>
+    <fontcolor name="OtherThread_BP" bgColor="ff080d18"/>
+    <fontcolor name="OtherThread_BP_broken" bgColor="ff070d17"/>
+    <fontcolor name="OtherThread_DBP" bgColor="ff070d17"/>
+    <fontcolor name="OtherThread_PC" bgColor="ff070d17"/>
+    <fontcolor name="OtherThread_PC_BP" bgColor="ff070d17"/>
+    <fontcolor name="OtherThreads"/>
+    <fontcolor name="OtherThreads_BP" bgColor="ff080d18"/>
+    <fontcolor name="OtherThreads_BP_broken" bgColor="ff070d17"/>
+    <fontcolor name="OtherThreads_DBP" bgColor="ff070d17"/>
+    <fontcolor name="OtherThreads_PC_BP" bgColor="ff070d17"/>
+    <fontcolor name="PHPError" waveUnderlined="ffe76a74"/>
+    <fontcolor name="PHPNotice" waveUnderlined="ffe76a74"/>
+    <fontcolor name="PHPWarning" waveUnderlined="ffe76a74"/>
+    <fontcolor name="resetResultsProfilingPoint" bgColor="ff1e467e"/>
+    <fontcolor name="resetResultsProfilingPointD" bgColor="ff080d18"/>
+    <fontcolor name="stopwatchProfilingPoint" bgColor="ff1e467e"/>
+    <fontcolor name="stopwatchProfilingPointD" bgColor="ff080d18"/>
+    <fontcolor name="takeSnapshotProfilingPoint" bgColor="ff1e467e"/>
+    <fontcolor name="takeSnapshotProfilingPointD" bgColor="ff080d18"/>
+</fontscolors>

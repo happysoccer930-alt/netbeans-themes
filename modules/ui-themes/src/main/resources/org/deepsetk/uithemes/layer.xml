@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "https://netbeans.apache.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Editors">
+        <folder name="FontsColors">
+            <folder name="DeepSetkDark">
+                <folder name="Defaults">
+                    <file name="org-deepsetk-dark-token.xml" url="fontscolors/DeepSetkDark-tokenColorings.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="token"/>
+                    </file>
+                    <file name="org-deepsetk-dark-highlights.xml" url="fontscolors/DeepSetkDark-highlights.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="highlight"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="DeepSetkHackerGreen">
+                <folder name="Defaults">
+                    <file name="org-deepsetk-green-token.xml" url="fontscolors/DeepSetkHackerGreen-tokenColorings.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="token"/>
+                    </file>
+                    <file name="org-deepsetk-green-highlights.xml" url="fontscolors/DeepSetkHackerGreen-highlights.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="highlight"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="text">
+            <folder name="x-java">
+                <folder name="FontsColors">
+                    <folder name="DeepSetkDark">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-dark-java.xml" url="fontscolors/DeepSetkDark-Java-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                    <folder name="DeepSetkHackerGreen">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-green-java.xml" url="fontscolors/DeepSetkHackerGreen-Java-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-sql">
+                <folder name="FontsColors">
+                    <folder name="DeepSetkDark">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-dark-sql.xml" url="fontscolors/DeepSetkDark-SQL-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                    <folder name="DeepSetkHackerGreen">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-green-sql.xml" url="fontscolors/DeepSetkHackerGreen-SQL-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+
+    <folder name="Actions">
+        <folder name="Tools">
+            <file name="org-deepsetk-ui-dark.instance">
+                <attr name="instanceClass" stringvalue="org.deepsetk.uithemes.ApplyDarkAction"/>
+            </file>
+            <file name="org-deepsetk-ui-green.instance">
+                <attr name="instanceClass" stringvalue="org.deepsetk.uithemes.ApplyGreenAction"/>
+            </file>
+            <file name="org-deepsetk-ui-disable.instance">
+                <attr name="instanceClass" stringvalue="org.deepsetk.uithemes.DisableThemeAction"/>
+            </file>
+        </folder>
+    </folder>
+
+    <folder name="Menu">
+        <folder name="Tools">
+            <file name="org-deepsetk-ui-dark.shadow">
+                <attr name="originalFile" stringvalue="Actions/Tools/org-deepsetk-ui-dark.instance"/>
+                <attr name="position" intvalue="1514"/>
+            </file>
+            <file name="org-deepsetk-ui-green.shadow">
+                <attr name="originalFile" stringvalue="Actions/Tools/org-deepsetk-ui-green.instance"/>
+                <attr name="position" intvalue="1516"/>
+            </file>
+            <file name="org-deepsetk-ui-disable.shadow">
+                <attr name="originalFile" stringvalue="Actions/Tools/org-deepsetk-ui-disable.instance"/>
+                <attr name="position" intvalue="1532"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>

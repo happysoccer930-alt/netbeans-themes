@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Layer: org/deepsetk/cyberpunk/layer.xml
+OpenIDE-Module-Install: org/deepsetk/cyberpunk/CyberpunkInstaller.class
+OpenIDE-Module-Short-Description: Estilo Cyberpunk negro y azul para el IDE y el editor.
+OpenIDE-Module-Long-Description: Anade un perfil de colores Cyberpunk (fondo negro azulado, azul electrico y cian) y cambia menus, barras, pestanas, arbol, listas, tablas y botones a una paleta negra/azul. Incluye acciones para activarlo o volver a Soft Dark. El editor toma el perfil al reiniciar.
+OpenIDE-Module-Display-Category: DeepSetk

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "https://netbeans.apache.org/dtds/EditorFontsColors-1_1.dtd">
+<!--
+  Cyberpunk - colores base del editor.
+  Paleta calida de bajo contraste: fondo grafito calido, texto gris suave
+  (nunca blanco puro) y acentos desaturados para reducir la fatiga visual.
+  Derivado de la paleta FlatLafDark de Apache NetBeans (Apache-2.0).
+-->
+<fontscolors>
+    <fontcolor name="char" foreColor="ff22d3ee"/>
+    <fontcolor name="comment" foreColor="ff5f7fa8"><font style="italic"/></fontcolor>
+    <fontcolor name="default" foreColor="ffd7e3f4" bgColor="ff070b12"/>
+    <fontcolor name="entity-reference" default="default"/>
+    <fontcolor name="error" waveUnderlined="ffff5c7a"/>
+    <fontcolor name="field" default="identifier" foreColor="ffb4c7e7"/>
+    <fontcolor name="identifier" foreColor="ffd7e3f4"/>
+    <fontcolor name="keyword" foreColor="ff4ea1ff"/>
+    <fontcolor name="mark-occurrences" bgColor="ff0e2a4a"/>
+    <fontcolor name="markup-attribute" default="field" foreColor="ff9cc7ff"/>
+    <fontcolor name="markup-attribute-value" default="string" foreColor="ff22d3ee"/>
+    <fontcolor name="markup-element" default="keyword" foreColor="ff4ea1ff"/>
+    <fontcolor name="method" default="identifier" foreColor="ff7fb3f0"/>
+    <fontcolor name="number" foreColor="ff8ab4f8"/>
+    <fontcolor name="operator" foreColor="ff9cc7ff"/>
+    <fontcolor name="separator" foreColor="ff9cc7ff"/>
+    <fontcolor name="string" foreColor="ff22d3ee"/>
+    <fontcolor name="url" foreColor="ff22d3ee" underline="ff22d3ee"/>
+    <fontcolor name="warning" bgColor="ff2a1e10" waveUnderlined="ffffb86c"/>
+    <fontcolor name="whitespace" foreColor="ff1e2a44"/>
+</fontscolors>

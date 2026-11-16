@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "https://netbeans.apache.org/dtds/EditorFontsColors-1_1.dtd">
+<!--
+  Soft Dark - colores base del editor.
+  Paleta calida de bajo contraste: fondo grafito calido, texto gris suave
+  (nunca blanco puro) y acentos desaturados para reducir la fatiga visual.
+  Derivado de la paleta FlatLafDark de Apache NetBeans (Apache-2.0).
+-->
+<fontscolors>
+    <fontcolor name="char" foreColor="ff9db38a"/>
+    <fontcolor name="comment" foreColor="ff6f7883"><font style="italic"/></fontcolor>
+    <fontcolor name="default" foreColor="ffb8bfc9" bgColor="ff15171b"/>
+    <fontcolor name="entity-reference" default="default"/>
+    <fontcolor name="error" waveUnderlined="ffb05c5c"/>
+    <fontcolor name="field" default="identifier" foreColor="ffb09ab8"/>
+    <fontcolor name="identifier" foreColor="ffb8bfc9"/>
+    <fontcolor name="keyword" foreColor="ffb48eae"/>
+    <fontcolor name="mark-occurrences" bgColor="ff27312b"/>
+    <fontcolor name="markup-attribute" default="field" foreColor="ffa9b0b8"/>
+    <fontcolor name="markup-attribute-value" default="string" foreColor="ff9db38a"/>
+    <fontcolor name="markup-element" default="keyword" foreColor="ffc0a97e"/>
+    <fontcolor name="method" default="identifier" foreColor="ff8fb6c4"/>
+    <fontcolor name="number" foreColor="ffc99f7a"/>
+    <fontcolor name="operator" foreColor="ff9aa3ae"/>
+    <fontcolor name="separator" foreColor="ff9aa3ae"/>
+    <fontcolor name="string" foreColor="ff9db38a"/>
+    <fontcolor name="url" foreColor="ff7ba6c9" underline="ff7ba6c9"/>
+    <fontcolor name="warning" bgColor="ff3b3729" waveUnderlined="ffa8906a"/>
+    <fontcolor name="whitespace" foreColor="ff2f343b"/>
+</fontscolors>

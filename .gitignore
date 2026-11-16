@@ -1,0 +1,10 @@
+target/
+build/
+*.class
+nbproject/private/
+.idea/
+*.iml
+Thumbs.db
+desktop.ini
+*.log
+*.bak

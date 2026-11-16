@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Layer: org/deepsetk/softdark/layer.xml
+OpenIDE-Module-Install: org/deepsetk/softdark/SoftDarkInstaller.class
+OpenIDE-Module-Short-Description: Soft Dark - tema oscuro calido de bajo contraste para el editor.
+OpenIDE-Module-Long-Description: Anade el perfil de colores "Soft Dark": fondo grafito calido, texto gris suave (sin blanco puro) y paleta de sintaxis desaturada para reducir la fatiga visual. Incluye colores para Java, XML, HTML, CSS, JavaScript, JSON, YAML, SQL, Markdown, Properties y Diff. Al instalarlo se activa automaticamente; puedes volver a otro perfil en Herramientas > Opciones > Fuentes y colores.
+OpenIDE-Module-Display-Category: DeepSetk

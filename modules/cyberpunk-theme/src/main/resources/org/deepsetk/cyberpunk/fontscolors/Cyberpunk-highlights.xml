@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "https://netbeans.apache.org/dtds/EditorFontsColors-1_1.dtd">
+<!--
+  Cyberpunk - resaltados del editor (seleccion, linea actual, busqueda,
+  numeros de linea, caret...). Valores pensados para no deslumbrar.
+-->
+<fontscolors>
+    <fontcolor name="block-search" foreColor="ffcddce9" bgColor="ff1b4b7a"/>
+    <fontcolor name="caret-color-insert-mode" foreColor="ff00e5ff"/>
+    <fontcolor name="caret-color-overwrite-mode" foreColor="ff00e5ff"/>
+    <fontcolor name="code-folding" foreColor="ff5f7fa8" bgColor="ff0b1424"/>
+    <fontcolor name="code-folding-bar" foreColor="ff2a4a6a"/>
+    <fontcolor name="code-folding-border" foreColor="ff2a4a6a"/>
+    <fontcolor name="guarded" bgColor="ff0a1220"/>
+    <fontcolor name="highlight-caret-row" bgColor="ff0a1526"/>
+    <fontcolor name="highlight-search" bgColor="ff14406a"/>
+    <fontcolor name="hyperlinks" foreColor="ff93bbde" underline="ff22d3ee"/>
+    <fontcolor name="inc-search" foreColor="ffc7d6f0" bgColor="ff1b4b7a"/>
+    <fontcolor name="indent-guide-lines" foreColor="ff142840"/>
+    <fontcolor name="indent-whitespace"/>
+    <fontcolor name="line-number" foreColor="ff4f6f96" bgColor="ff050810"/>
+    <fontcolor name="nbeditor-bracesMatching-match" foreColor="ffa0bcec" bgColor="ff123a66"/>
+    <fontcolor name="nbeditor-bracesMatching-match-multichar" bgColor="ff123a66"/>
+    <fontcolor name="nbeditor-bracesMatching-mismatch" bgColor="ff4a1420"/>
+    <fontcolor name="nbeditor-bracesMatching-mismatch-multichar" bgColor="ff4a1420"/>
+    <fontcolor name="nbeditor-bracesMatching-sidebar" foreColor="ff8dafcc"/>
+    <fontcolor name="readonly-files" bgColor="ff0a1220"/>
+    <fontcolor name="selection" bgColor="ff123a66"/>
+    <fontcolor name="status-bar"/>
+    <fontcolor name="status-bar-bold" foreColor="ff22d3ee"/>
+    <fontcolor name="synchronized-text-blocks-ext" foreColor="ff8db0cf"/>
+    <fontcolor name="synchronized-text-blocks-ext-slave" foreColor="ff648bce"/>
+    <fontcolor name="text-limit-line-color" foreColor="ff729cc0"/>
+    <fontcolor name="trailing-whitespace"/>
+    <fontcolor name="west-sidebars-color"/>
+    <fontcolor name="coverage-covered" bgColor="ff0c1f3b"/>
+    <fontcolor name="coverage-uncovered" bgColor="ff0e2240"/>
+    <fontcolor name="coverage-inferred" bgColor="ff0b1c35"/>
+    <fontcolor name="coverage-partial" bgColor="ff0c1f3b"/>
+    <fontcolor name="remove-surround-code-delete" foreColor="ff729cc0" bgColor="ff070d16"/>
+    <fontcolor name="remove-surround-code-remain" bgColor="ff070d17"/>
+</fontscolors>

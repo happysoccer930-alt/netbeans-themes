@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.deepsetk</groupId>
+    <artifactId>deepsetk-themes</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>DeepSetk NetBeans Themes</name>
+    <description>Temas de interfaz para Apache NetBeans: DeepSetk Dark, Hacker Green, Cyberpunk y Soft Dark, con perfiles de editor.</description>
+
+    <properties>
+        <!-- Version de Apache NetBeans (RELEASE310 = NetBeans 31) -->
+        <netbeans.version>RELEASE310</netbeans.version>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <modules>
+        <module>modules/ui-themes</module>
+        <module>modules/cyberpunk-theme</module>
+        <module>modules/softdark-theme</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.14.0</version>
+                    <configuration>
+                        <release>${maven.compiler.release}</release>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.4.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.netbeans.utilities</groupId>
+                    <artifactId>nbm-maven-plugin</artifactId>
+                    <version>14.5</version>
+                    <configuration>
+                        <author>DeepSetk</author>
+                        <licenseName>Apache-2.0</licenseName>
+                        <homePageUrl>https://deepsetk.local</homePageUrl>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

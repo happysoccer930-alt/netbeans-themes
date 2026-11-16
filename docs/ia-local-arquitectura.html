@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Local Offline - Arquitectura</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" integrity="sha384-en/ztfPSRkGfME4KIm05joYXynqzUgbsG5nMrj/xEFAHXkeZfO3yMK8QQ+mP7p1/" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #020617;
+      min-height: 100vh;
+      padding: 2rem;
+      color: white;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .header { margin-bottom: 2rem; }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pulse-dot {
+      width: 12px;
+      height: 12px;
+      background: #22d3ee;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
+
+    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
+
+    .diagram-container {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 1rem;
+      border: 1px solid #1e293b;
+      padding: 1.5rem;
+      overflow-x: auto;
+    }
+
+    svg { width: 100%; min-width: 900px; display: block; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 0.75rem;
+      border: 1px solid #1e293b;
+      padding: 1.25rem;
+    }
+
+    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+    .card-dot.cyan { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.violet { background: #a78bfa; }
+    .card-dot.amber { background: #fbbf24; }
+    .card-dot.rose { background: #fb7185; }
+
+    .card h3 { font-size: 0.875rem; font-weight: 600; }
+
+    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
+
+    .card li { margin-bottom: 0.375rem; }
+
+    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
+
+    .toolbar { display: flex; gap: 0.5rem; margin-left: auto; flex-shrink: 0; align-items: center; }
+    .toolbar-toggle {
+      background: transparent; border: none; color: #475569; cursor: pointer;
+      font-size: 1.25rem; line-height: 1; padding: 0.25rem 0.5rem;
+      border-radius: 0.375rem; transition: color 0.2s, background 0.2s;
+    }
+    .toolbar-toggle:hover { color: #94a3b8; background: rgba(30, 41, 59, 0.5); }
+    .toolbar-actions { display: none; gap: 0.5rem; }
+    .toolbar.expanded .toolbar-actions { display: flex; }
+    .toolbar-actions button {
+      background: rgba(30, 41, 59, 0.8); border: 1px solid #334155; color: #94a3b8;
+      padding: 0.375rem 0.75rem; border-radius: 0.375rem; font-family: inherit;
+      font-size: 0.75rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+    }
+    .toolbar-actions button:hover { background: rgba(51, 65, 85, 0.8); color: white; border-color: #475569; }
+
+    @media print {
+      body { background: #020617; padding: 1rem; }
+      .toolbar { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="report-container">
+    <div class="header">
+      <div class="header-row">
+        <div class="pulse-dot"></div>
+        <h1>IA Local Offline · DeepSetk</h1>
+        <div class="toolbar">
+          <div class="toolbar-actions">
+            <button onclick="copyAsImage(this)">📋 Copiar</button>
+            <button onclick="downloadPNG(this)">🖼️ PNG</button>
+            <button onclick="downloadPDF(this)">📄 PDF</button>
+          </div>
+          <button class="toolbar-toggle" onclick="this.parentElement.classList.toggle('expanded')" title="Exportar" aria-label="Exportar">⋯</button>
+        </div>
+      </div>
+      <p class="subtitle">Bionic (LM Studio) en :1235 → VS Code (Continue) + NetBeans (plugin ai-errors) · sin internet</p>
+    </div>
+
+    <div class="diagram-container">
+      <svg viewBox="0 0 1000 700">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowCyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowEmerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowViolet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- Refuerzo opaco para tapar flechas detras de las cajas -->
+        <rect x="60" y="170" width="230" height="150" rx="6" fill="#0f172a"/>
+        <rect x="620" y="110" width="320" height="120" rx="6" fill="#0f172a"/>
+        <rect x="620" y="300" width="320" height="120" rx="6" fill="#0f172a"/>
+        <rect x="340" y="380" width="230" height="140" rx="6" fill="#0f172a"/>
+        <rect x="60" y="400" width="230" height="140" rx="6" fill="#0f172a"/>
+
+        <!-- ================= FLECHAS (detras de las cajas) ================= -->
+        <!-- VS Code -> Bionic -->
+        <line x1="618" y1="170" x2="296" y2="220" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+        <text x="452" y="182" fill="#94a3b8" font-size="8" text-anchor="middle">HTTP /v1 · 127.0.0.1:1235</text>
+
+        <!-- NetBeans -> Bionic -->
+        <line x1="618" y1="350" x2="296" y2="292" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowEmerald)"/>
+        <text x="452" y="336" fill="#94a3b8" font-size="8" text-anchor="middle">POST /chat/completions</text>
+
+        <!-- Bionic -> Indice (embeddings) -->
+        <line x1="292" y1="305" x2="352" y2="392" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrowViolet)"/>
+        <text x="300" y="352" fill="#a78bfa" font-size="7">embeddings 768d</text>
+
+        <!-- Indice -> VS Code (contexto) -->
+        <path d="M 572 430 L 590 430 Q 598 430 598 422 L 598 178 Q 598 170 606 170 L 616 170"
+              fill="none" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrowViolet)"/>
+        <text x="604" y="262" fill="#a78bfa" font-size="7">contexto</text>
+
+        <!-- ================= LIMITE SIN INTERNET ================= -->
+        <rect x="30" y="60" width="940" height="552" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="44" y="80" fill="#fbbf24" font-size="10" font-weight="600">TU PC · MODO SIN INTERNET</text>
+
+        <!-- ================= SERVICIO LOCAL ================= -->
+        <rect x="60" y="170" width="230" height="150" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="175" y="196" fill="white" font-size="11" font-weight="600" text-anchor="middle">Bionic (LM Studio)</text>
+        <text x="175" y="214" fill="#94a3b8" font-size="9" text-anchor="middle">API OpenAI · puerto 1235</text>
+        <line x1="76" y1="226" x2="274" y2="226" stroke="#1e293b" stroke-width="1"/>
+        <text x="175" y="246" fill="#34d399" font-size="9" text-anchor="middle">qwen2.5-coder-1.5b</text>
+        <text x="175" y="262" fill="#94a3b8" font-size="8" text-anchor="middle">chat · autocompletado</text>
+        <text x="175" y="282" fill="#a78bfa" font-size="9" text-anchor="middle">nomic-embed · 768d</text>
+        <text x="175" y="304" fill="#94a3b8" font-size="7" text-anchor="middle">1.53 GB en disco · 100% local</text>
+
+        <!-- ================= VS CODE ================= -->
+        <rect x="620" y="110" width="320" height="120" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="780" y="134" fill="white" font-size="11" font-weight="600" text-anchor="middle">Visual Studio Code</text>
+        <text x="780" y="152" fill="#94a3b8" font-size="9" text-anchor="middle">Continue v2 · autocompletado + chat</text>
+        <text x="780" y="172" fill="#94a3b8" font-size="8" text-anchor="middle">Python · Java · JS · SQL · HTML · CSS</text>
+        <text x="780" y="190" fill="#94a3b8" font-size="8" text-anchor="middle">Tab acepta · Ctrl+L chat · Ctrl+I editar</text>
+        <text x="780" y="214" fill="#22d3ee" font-size="8" text-anchor="middle">~/.continue/config.yaml</text>
+
+        <!-- ================= NETBEANS ================= -->
+        <rect x="620" y="300" width="320" height="120" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="780" y="324" fill="white" font-size="11" font-weight="600" text-anchor="middle">NetBeans 31</text>
+        <text x="780" y="342" fill="#94a3b8" font-size="9" text-anchor="middle">plugin ai-errors</text>
+        <text x="780" y="362" fill="#94a3b8" font-size="8" text-anchor="middle">Sugerencias fantasma (Tab)</text>
+        <text x="780" y="380" fill="#94a3b8" font-size="8" text-anchor="middle">Explicar error con IA</text>
+        <text x="780" y="400" fill="#34d399" font-size="8" text-anchor="middle">autodetecta 1235 · 1234 · 11434 · 8080</text>
+
+        <!-- ================= INDICE / BASE DE DATOS ================= -->
+        <rect x="340" y="380" width="230" height="140" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="455" y="404" fill="white" font-size="11" font-weight="600" text-anchor="middle">Índice del código</text>
+        <text x="455" y="422" fill="#94a3b8" font-size="8" text-anchor="middle">vector DB de Continue</text>
+        <text x="455" y="442" fill="#a78bfa" font-size="9" text-anchor="middle">nomic-embed (768 dims)</text>
+        <text x="455" y="462" fill="#94a3b8" font-size="8" text-anchor="middle">~/.continue/index</text>
+        <text x="455" y="484" fill="#94a3b8" font-size="8" text-anchor="middle">fragmentos de tu proyecto</text>
+        <text x="455" y="504" fill="#94a3b8" font-size="7" text-anchor="middle">contexto automático al escribir</text>
+
+        <!-- ================= CONFIGURACION ================= -->
+        <rect x="60" y="400" width="230" height="140" rx="6" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="175" y="424" fill="white" font-size="11" font-weight="600" text-anchor="middle">Configuración</text>
+        <text x="175" y="444" fill="#94a3b8" font-size="8" text-anchor="middle">~/.continue/config.yaml</text>
+        <text x="175" y="462" fill="#94a3b8" font-size="8" text-anchor="middle">Code/User/settings.json</text>
+        <text x="175" y="480" fill="#94a3b8" font-size="8" text-anchor="middle">NetBeans modules/</text>
+        <text x="175" y="504" fill="#fbbf24" font-size="8" text-anchor="middle">sin claves · sin telemetría</text>
+        <text x="175" y="522" fill="#94a3b8" font-size="7" text-anchor="middle">respaldo en D:\DeepSetk\backups</text>
+
+        <!-- ================= LEYENDA (fuera del límite) ================= -->
+        <text x="44" y="644" fill="white" font-size="10" font-weight="600">Leyenda</text>
+
+        <rect x="110" y="634" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="132" y="642" fill="#94a3b8" font-size="8">Editor / cliente</text>
+
+        <rect x="230" y="634" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="252" y="642" fill="#94a3b8" font-size="8">Servidor local</text>
+
+        <rect x="360" y="634" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="382" y="642" fill="#94a3b8" font-size="8">Índice / base vectorial</text>
+
+        <rect x="530" y="634" width="16" height="10" rx="2" fill="rgba(30, 41, 59, 0.5)" stroke="#94a3b8" stroke-width="1"/>
+        <text x="552" y="642" fill="#94a3b8" font-size="8">Configuración</text>
+
+        <rect x="650" y="634" width="16" height="10" rx="2" fill="transparent" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="672" y="642" fill="#94a3b8" font-size="8">Límite sin internet</text>
+      </svg>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot emerald"></div>
+          <h3>Servidor local (Bionic)</h3>
+        </div>
+        <ul>
+          <li>• API compatible OpenAI en 127.0.0.1:1235</li>
+          <li>• qwen2.5-coder-1.5b: chat + autocompletado</li>
+          <li>• nomic-embed 768d: índice del código</li>
+          <li>• Debe estar abierto para responder</li>
+          <li>• Modelo roto (Kexer) eliminado: 1.33 GB libres</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot cyan"></div>
+          <h3>Clientes</h3>
+        </div>
+        <ul>
+          <li>• VS Code: Continue v2 (Tab, Ctrl+L, Ctrl+I)</li>
+          <li>• NetBeans: plugin ai-errors (fantasma + explicar)</li>
+          <li>• Mismos endpoints, mismo modelo</li>
+          <li>• Todos los lenguajes: Python, Java, JS, SQL…</li>
+          <li>• Sin telemetría ni claves de API</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot violet"></div>
+          <h3>Contexto eficiente</h3>
+        </div>
+        <ul>
+          <li>• El índice vectorial guarda fragmentos del proyecto</li>
+          <li>• Se consulta al pedir ayuda (@codebase)</li>
+          <li>• Autocompletado limitado a 512 tokens</li>
+          <li>• Reglas: español, sin inventar APIs</li>
+          <li>• Con 12 GB: cerrar Chrome al programar</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer">
+      DeepSetk · IA local offline · 15/11/2026
+    </p>
+  </div>
+
+  <script>
+    async function copyAsImage(btn) {
+      const orig = btn.textContent;
+      try {
+        const el = document.getElementById('report-container');
+        const r = el.getBoundingClientRect();
+        const pad = 32;
+        const canvas = await html2canvas(document.body, { backgroundColor: '#020617', scale: 2, useCORS: true, ignoreElements: (e) => e.classList && e.classList.contains('toolbar'), x: r.left + window.scrollX - pad, y: r.top + window.scrollY - pad, width: r.width + pad * 2, height: r.height + pad * 2 });
+        const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+        btn.textContent = '✓ Copiado';
+      } catch (e) {
+        btn.textContent = '✗ Falló';
+      }
+      setTimeout(() => btn.textContent = orig, 2000);
+    }
+
+    async function downloadPNG(btn) {
+      const orig = btn.textContent;
+      btn.textContent = '⏳ ...';
+      try {
+        const el = document.getElementById('report-container');
+        const r = el.getBoundingClientRect();
+        const pad = 32;
+        const canvas = await html2canvas(document.body, { backgroundColor: '#020617', scale: 2, useCORS: true, ignoreElements: (e) => e.classList && e.classList.contains('toolbar'), x: r.left + window.scrollX - pad, y: r.top + window.scrollY - pad, width: r.width + pad * 2, height: r.height + pad * 2 });
+        const link = document.createElement('a');
+        link.download = 'ia-local-arquitectura.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        btn.textContent = '✓ Listo';
+      } catch (e) {
+        btn.textContent = '✗ Falló';
+      }
+      setTimeout(() => btn.textContent = orig, 2000);
+    }
+
+    async function downloadPDF(btn) {
+      const orig = btn.textContent;
+      btn.textContent = '⏳ ...';
+      try {
+        const el = document.getElementById('report-container');
+        const r = el.getBoundingClientRect();
+        const pad = 32;
+        const canvas = await html2canvas(document.body, { backgroundColor: '#020617', scale: 2, useCORS: true, ignoreElements: (e) => e.classList && e.classList.contains('toolbar'), x: r.left + window.scrollX - pad, y: r.top + window.scrollY - pad, width: r.width + pad * 2, height: r.height + pad * 2 });
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const orientation = canvas.width > canvas.height ? 'landscape' : 'portrait';
+        const pdf = new jsPDF({ orientation, unit: 'px', format: [canvas.width, canvas.height], hotfixes: ['px_scaling'] });
+        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+        pdf.save('ia-local-arquitectura.pdf');
+        btn.textContent = '✓ Listo';
+      } catch (e) {
+        btn.textContent = '✗ Falló';
+      }
+      setTimeout(() => btn.textContent = orig, 2000);
+    }
+  </script>
+</body>
+</html>

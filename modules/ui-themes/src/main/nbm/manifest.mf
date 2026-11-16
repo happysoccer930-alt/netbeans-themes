@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.deepsetk.uithemes
+OpenIDE-Module-Layer: org/deepsetk/uithemes/layer.xml
+OpenIDE-Module-Install: org/deepsetk/uithemes/ThemeInstaller.class
+OpenIDE-Module-Name: DeepSetk UI Themes
+OpenIDE-Module-Short-Description: Temas de interfaz DeepSetk Dark y Hacker Green.
+OpenIDE-Module-Long-Description: Aplica colores oscuros o verde neon a la interfaz de NetBeans y sus perfiles de editor.
+OpenIDE-Module-Display-Category: DeepSetk
+OpenIDE-Module-Specification-Version: 1.0.0
+OpenIDE-Module-Implementation-Version: 1.0.0
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1

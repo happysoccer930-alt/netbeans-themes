@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor name="attribute-name" default="default"/>
+    <fontcolor name="attribute-value" default="default" foreColor="ffa3bd8a"/>
+    <fontcolor name="comment" default="default" foreColor="ff6f7883"/>
+    <fontcolor name="endtag" default="default" foreColor="ffb98a72"><font style="bold"/></fontcolor>
+    <fontcolor name="error" default="default" foreColor="ffc98a8a"><font style="bold"/></fontcolor>
+    <fontcolor name="expression-language" default="default" bgColor="ff131518"/>
+    <fontcolor name="jsp-whitespace" default="default"><font style="bold"/></fontcolor>
+    <fontcolor name="scriptlet-delimiter" default="default" bgColor="ff191c20"/>
+    <fontcolor name="scriptlet" default="default" bgColor="ff191c20"/>
+    <fontcolor name="symbol" default="default"/>
+    <fontcolor name="tag-directive" default="default" foreColor="ffb98a72"><font style="bold"/></fontcolor>
+</fontscolors>

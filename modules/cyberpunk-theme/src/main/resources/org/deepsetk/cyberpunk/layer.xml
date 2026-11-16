@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "https://netbeans.apache.org/dtds/filesystem-1_2.dtd">
+<!-- Generado por tools/generate-cyberpunk.ps1 -->
+<filesystem>
+<folder name="Editors">
+        <folder name="FontsColors">
+            <folder name="Cyberpunk">
+                <folder name="Defaults">
+                    <file name="org-deepsetk-softdark-annotations.xml" url="fontscolors/Cyberpunk-annotations.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="annotation"/>
+                    </file>
+                    <file name="org-deepsetk-softdark-highlights.xml" url="fontscolors/Cyberpunk-highlights.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="highlight"/>
+                    </file>
+                    <file name="org-deepsetk-softdark-token.xml" url="fontscolors/Cyberpunk-tokenColorings.xml">
+                        <attr name="nbeditor-settings-ColoringType" stringvalue="token"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="application">
+            <folder name="xml-dtd">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-dtd-colorings.xml" url="fontscolors/Cyberpunk-DTD-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="text">
+            <folder name="css">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-css-colorings.xml" url="fontscolors/Cyberpunk-CSS-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="html">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-html-colorings.xml" url="fontscolors/Cyberpunk-HTML-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="javascript">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-javascript-colorings.xml" url="fontscolors/Cyberpunk-JavaScript-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-apache-conf">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-apacheconf-colorings.xml" url="fontscolors/Cyberpunk-ApacheConf-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-diff">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-diff-colorings.xml" url="fontscolors/Cyberpunk-Diff-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-el">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-el-colorings.xml" url="fontscolors/Cyberpunk-EL-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-ini">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-ini-colorings.xml" url="fontscolors/Cyberpunk-INI-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-java">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-java-colorings.xml" url="fontscolors/Cyberpunk-Java-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-json">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-json-colorings.xml" url="fontscolors/Cyberpunk-JSON-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-jsp">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-jsp-colorings.xml" url="fontscolors/Cyberpunk-JSP-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-php5">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-php-colorings.xml" url="fontscolors/Cyberpunk-PHP-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-properties">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-properties-colorings.xml" url="fontscolors/Cyberpunk-Properties-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-sql">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-sql-colorings.xml" url="fontscolors/Cyberpunk-SQL-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-tag">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-tag-colorings.xml" url="fontscolors/Cyberpunk-Tag-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-tpl">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-tpl-colorings.xml" url="fontscolors/Cyberpunk-TPL-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="xhtml">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-xhtml-colorings.xml" url="fontscolors/Cyberpunk-XHTML-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="xml">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-xml-colorings.xml" url="fontscolors/Cyberpunk-XML-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="xml-external-parsed-entity">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-xmlexternalentity-colorings.xml" url="fontscolors/Cyberpunk-XMLexternalentity-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-yaml">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-yaml-colorings.xml" url="fontscolors/Cyberpunk-YAML-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+            <folder name="x-markdown">
+                <folder name="FontsColors">
+                    <folder name="Cyberpunk">
+                        <folder name="Defaults">
+                            <file name="org-deepsetk-softdark-markdown-colorings.xml" url="fontscolors/Cyberpunk-Markdown-tokenColorings.xml"/>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+
+
+    <folder name="Actions">
+        <folder name="Tools">
+            <file name="org-deepsetk-cyberpunk-apply.instance">
+                <attr name="instanceClass" stringvalue="org.deepsetk.cyberpunk.ApplyCyberpunkAction"/>
+            </file>
+            <file name="org-deepsetk-cyberpunk-disable.instance">
+                <attr name="instanceClass" stringvalue="org.deepsetk.cyberpunk.DisableCyberpunkAction"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Tools">
+            <file name="org-deepsetk-cyberpunk-apply.shadow">
+                <attr name="originalFile" stringvalue="Actions/Tools/org-deepsetk-cyberpunk-apply.instance"/>
+                <attr name="position" intvalue="1512"/>
+            </file>
+            <file name="org-deepsetk-cyberpunk-disable.shadow">
+                <attr name="originalFile" stringvalue="Actions/Tools/org-deepsetk-cyberpunk-disable.instance"/>
+                <attr name="position" intvalue="1530"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>
